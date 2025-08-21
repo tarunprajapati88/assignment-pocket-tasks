@@ -77,19 +77,52 @@ flutter run
 
 ## 🏗️ Project Structure
 lib/
-├── main.dart # App entry point
-├── models/
-│ └── task.dart # Task data model
-├── services/
-│ └── task_storage.dart # SharedPreferences service
-├── providers/
-│ └── task_provider.dart # State management
-├── widgets/
-│ ├── add_task_form.dart # Task creation form
-│ ├── task_item.dart # Individual task widget
-│ └── circular_progress_painter.dart # Custom progress ring
-└── screens/
-└── home_screen.dart # Main screen
+├── 📱 main.dart                    # App entry point & theme configuration
+├── 📊 models/
+│   └── task.dart                   # Task data model with JSON serialization
+├── 💾 services/
+│   └── task_storage.dart           # SharedPreferences storage service
+├── 🔄 providers/
+│   └── task_provider.dart          # State management with ChangeNotifier
+├── 🎨 widgets/
+│   ├── add_task_form.dart          # Task creation form with validation
+│   ├── task_item.dart              # Individual task widget with animations
+│   └── circular_progress_painter.dart  # Custom progress ring widget
+└── 📱 screens/
+    └── home_screen.dart            # Main screen with search & filters
+
+test/
+└── 🧪 task_provider_test.dart      # Unit tests for core functionality
+
+android/
+├── app/
+│   ├── build.gradle.kts            # Android build configuration
+│   └── src/main/AndroidManifest.xml
+└── gradle.properties
+
+ios/
+├── Runner/
+│   └── Info.plist                  # iOS app configuration
+└── Runner.xcworkspace
+
+📄 pubspec.yaml                     # Flutter dependencies & metadata
+📖 README.md                        # Project documentation
+📜 LICENSE                          # MIT license file
+🔧 .gitignore                       # Git ignore rules
+
+🎯 Architecture Overview
+┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
+│   UI Screens    │ ── │    Providers    │ ── │    Services     │
+│  (home_screen)  │    │ (task_provider) │    │ (task_storage)  │
+└─────────────────┘    └─────────────────┘    └─────────────────┘
+         │                       │                       │
+         │                       │                       │
+    ┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
+    │    Widgets      │    │     Models      │    │ SharedPreferences│
+    │ (task_item,     │    │   (task.dart)   │    │   (JSON Data)   │
+    │  add_form, etc) │    │                 │    │                 │
+    └─────────────────┘    └─────────────────┘    └─────────────────┘
+
 
 
 ### Test Coverage
@@ -141,26 +174,7 @@ No special permissions required - app works offline!
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
-## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 👨‍💻 Author
-
-**Your Name**
-- GitHub: [@YOUR_USERNAME](https://github.com/YOUR_USERNAME)
-- LinkedIn: [Your LinkedIn](https://linkedin.com/in/your-profile)
-
-## 🙏 Acknowledgments
-
-- Flutter team for the amazing framework
-- Material Design team for design guidelines
-- Provider package maintainers
-- Flutter community for inspiration
-
----
-
-<div align="center">
 
 **Made with ❤️ and Flutter**
 
