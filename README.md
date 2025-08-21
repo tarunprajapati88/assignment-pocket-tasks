@@ -74,54 +74,23 @@ flutter pub get
 Run the app
 flutter run
 
-
 ## 🏗️ Project Structure
-lib/
-├── 📱 main.dart                    # App entry point & theme configuration
-├── 📊 models/
-│   └── task.dart                   # Task data model with JSON serialization
-├── 💾 services/
-│   └── task_storage.dart           # SharedPreferences storage service
-├── 🔄 providers/
-│   └── task_provider.dart          # State management with ChangeNotifier
-├── 🎨 widgets/
-│   ├── add_task_form.dart          # Task creation form with validation
-│   ├── task_item.dart              # Individual task widget with animations
-│   └── circular_progress_painter.dart  # Custom progress ring widget
-└── 📱 screens/
-    └── home_screen.dart            # Main screen with search & filters
 
-test/
-└── 🧪 task_provider_test.dart      # Unit tests for core functionality
 
-android/
-├── app/
-│   ├── build.gradle.kts            # Android build configuration
-│   └── src/main/AndroidManifest.xml
-└── gradle.properties
 
-ios/
-├── Runner/
-│   └── Info.plist                  # iOS app configuration
-└── Runner.xcworkspace
+### 📁 Key Directories
 
-📄 pubspec.yaml                     # Flutter dependencies & metadata
-📖 README.md                        # Project documentation
-📜 LICENSE                          # MIT license file
-🔧 .gitignore                       # Git ignore rules
+| Directory | Purpose | Description |
+|-----------|---------|-------------|
+| `lib/models/` | Data structures | Task model with UUID & JSON serialization |
+| `lib/services/` | External services | SharedPreferences storage layer |
+| `lib/providers/` | State management | ChangeNotifier for reactive UI updates |
+| `lib/widgets/` | Reusable UI components | Custom widgets with animations |
+| `lib/screens/` | App screens | Main task management interface |
+| `test/` | Unit & widget tests | Automated testing for core features |
 
-🎯 Architecture Overview
-┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
-│   UI Screens    │ ── │    Providers    │ ── │    Services     │
-│  (home_screen)  │    │ (task_provider) │    │ (task_storage)  │
-└─────────────────┘    └─────────────────┘    └─────────────────┘
-         │                       │                       │
-         │                       │                       │
-    ┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
-    │    Widgets      │    │     Models      │    │ SharedPreferences│
-    │ (task_item,     │    │   (task.dart)   │    │   (JSON Data)   │
-    │  add_form, etc) │    │                 │    │                 │
-    └─────────────────┘    └─────────────────┘    └─────────────────┘
+### 🎯 Architecture Overview
+
 
 
 
