@@ -49,7 +49,7 @@
 
 | Light Theme | Dark Theme | Search & Filter |
 |-------------|------------|-----------------|
-| ![Light](screenshots/light.png) | ![Dark](screenshots/dark.png) | ![Search](screenshots/search.png) |
+|[ ![Light](screenshots/light.png)](https://github.com/tarunprajapati88/assignment-pocket-tasks/blob/main/Screenshot_2025-08-21-08-10-28-71_f212e371a3a872b6e47c8c7145b7047d.jpg) | ![Dark](screenshots/dark.png) | ![Search](screenshots/search.png) |
 
 ## 🚀 Installation
 
